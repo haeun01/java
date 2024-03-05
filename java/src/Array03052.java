@@ -17,7 +17,7 @@ public class Array03052 {
         System.out.println(Arrays.toString(intList2));
         System.out.println(Arrays.toString(intList1));
 
-        //배열과 for문의 사용
+        //배열과 for 문의 사용
         //조건식에 배열의 갯수(length)를 사용함
         for (int i = 0; i<intList2.length ; i++) {
             System.out.println(intList2[i]);
