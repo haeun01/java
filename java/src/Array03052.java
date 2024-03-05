@@ -22,5 +22,6 @@ public class Array03052 {
         for (int i = 0; i<intList2.length ; i++) {
             System.out.println(intList2[i]);
         }
+
     }
 }
