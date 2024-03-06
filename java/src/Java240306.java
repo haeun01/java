@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Java240306 {
     public static void main(String[] args) {
         // 문자열 길이
@@ -37,7 +39,19 @@ public class Java240306 {
         // @concat() : 문자열 연결
         String str5 = str3.concat(str4);
         System.out.println(str5);
+        System.out.println();
 
-
+        String str8 = "Hello Java!";
+        String str9 = "안녕하세요";
+        // 문자열 -> byte[] 변환
+        byte[] array1 = str8.getBytes();
+        byte[] array2 = str9.getBytes();
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array2));
+        // 문자열 -> char[] 변환
+        char[] array3 = str8.toCharArray();
+        char[] array4 = str9.toCharArray();
+        System.out.println(Arrays.toString(array3));
+        System.out.println(Arrays.toString(array4));
     }
 }
