@@ -18,7 +18,7 @@ public class JavaString2 {
 
         // @split() : 연산자를 이용하여 ':'와 '/' 기준으로 분리시킴
         // split 메소드의 리턴형은 String 문자열의 배열
-        String[] strArray = "Name:Michael/Man".split(":|/ ");
+        String[] strArray = "Name:Michael/Man".split(":|/| ");
         System.out.println(Arrays.toString(strArray));
         System.out.println();
 
