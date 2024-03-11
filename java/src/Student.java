@@ -15,6 +15,13 @@ public class Student {
         this.personalNum = personalNum;
     }
 
+    public Student(String name, int age, String address) { //일반 생성자
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
+    // 자동으로 만들어진 getter, setter
     public String getName() {
         return name;
     }
@@ -44,7 +51,7 @@ public class Student {
     }
 
 
-
+   // 직접 타이핑한 display
     public void displayName() { // 메소드
         System.out.println(this.name);
     }
