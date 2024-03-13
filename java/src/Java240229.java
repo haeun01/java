@@ -35,14 +35,14 @@ public class Java240229 {
         // 중복 해당되도록 조건을 만들면 안된다.
         int score = 91;
         if (score >= 90) {
-            System.out.println("A 학점");
+            System.out.println("Java240313.A 학점");
 
         } else if (score >= 80 && score < 90) {
-            System.out.println("B 학점");
+            System.out.println("Java240313.B 학점");
         } else if (score >= 70 && score < 80) {
-            System.out.println("C 학점");
+            System.out.println("Java240313.C 학점");
         } else if (score >= 60 && score < 70) {
-            System.out.println("D 학점");
+            System.out.println("Java240313.D 학점");
         } else {
             System.out.println("F 학점");
         }
@@ -74,16 +74,16 @@ public class Java240229 {
         int number = 2;
         switch (number) {
             case 1 :
-                System.out.println("A");
+                System.out.println("Java240313.A");
                 break;
             case 2 :
-                System.out.println("B");
+                System.out.println("Java240313.B");
                 break;
             case 3 :
-                System.out.println("C");
+                System.out.println("Java240313.C");
                 break;
             default:
-                System.out.println("D");
+                System.out.println("Java240313.D");
                 break;
         }
     }

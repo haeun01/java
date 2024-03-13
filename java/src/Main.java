@@ -2,7 +2,6 @@ public class Main {
     int a = 10;
     static int b = 20;
     public static void main(String[] args) {
-        System.out.println("Hello world!");
         print();
         print(b);  //'a'는 인스턴스화 됐기 때문에 사용X
     }

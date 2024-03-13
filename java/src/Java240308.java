@@ -1,3 +1,5 @@
+import App.Student;
+
 public class Java240308 {
     public static void main(String[] args) {
         Student tom = new Student("Tom", 18, "Daejeon", "123456");

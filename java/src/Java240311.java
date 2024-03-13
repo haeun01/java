@@ -39,7 +39,7 @@ public class Java240311 {
     public static int plusNums(int a, int b, int c, int d, int e, int f) {
         return a + b + c + d + e + f;
     }
-//    // 시그니처가 같기 때문에 에러가 난다.
+//    시그니처가 같기 때문에 에러가 난다.
 //    public static int plusNums(int... values) {
 //        int sum = 0;
 //        for (int i = 0; values.length; i++) {
