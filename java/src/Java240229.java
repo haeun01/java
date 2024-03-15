@@ -38,7 +38,7 @@ public class Java240229 {
             System.out.println("Java240313.A 학점");
 
         } else if (score >= 80 && score < 90) {
-            System.out.println("Java240313.B 학점");
+            System.out.println("Java240313.Java0315.B 학점");
         } else if (score >= 70 && score < 80) {
             System.out.println("Java240313.C 학점");
         } else if (score >= 60 && score < 70) {
@@ -77,7 +77,7 @@ public class Java240229 {
                 System.out.println("Java240313.A");
                 break;
             case 2 :
-                System.out.println("Java240313.B");
+                System.out.println("Java240313.Java0315.B");
                 break;
             case 3 :
                 System.out.println("Java240313.C");
