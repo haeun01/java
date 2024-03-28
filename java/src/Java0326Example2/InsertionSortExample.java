@@ -13,7 +13,7 @@ public class InsertionSortExample {
                 array [i+1] = array [i];
                 i--;
             }
-            array[i+1] = key;
+            array[i+1] = key;  //제일 왼쪽 끝
         }
     }
 

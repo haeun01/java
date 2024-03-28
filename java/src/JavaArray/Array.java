@@ -1,3 +1,5 @@
+package JavaArray;
+
 public class Array {
     public static void main(String[] args) {
         //배열의 기본 선언법

@@ -1,3 +1,5 @@
+package JavaString;
+
 import java.util.Arrays;
 
 public class JavaString2 {

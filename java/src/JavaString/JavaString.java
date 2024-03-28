@@ -1,3 +1,5 @@
+package JavaString;
+
 public class JavaString {
     public static void main(String[] args) {
         // String 클래스의 첫번째 특징
