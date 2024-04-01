@@ -5,21 +5,22 @@ import java.time.LocalDate;
 public class User {
     String name;
     String email;
-    int userId;
+    String userId;
     LocalDate birthDate;
     int password;
 
 
 
-    public User(String john, String mail, int i, LocalDate localDate, int i1) {
+    public User() {
 
     }
 
-    public User (String name, String email, int userId, int password) {
+    public User (String name, String email, String userId, LocalDate birthDate, int password) {
         this.name = name;
         this.email = email;
         this.userId = userId;
         this.password = password;
+        this.birthDate = birthDate;
     }
 
     public String getName() {
@@ -38,11 +39,11 @@ public class User {
         this.email = email;
     }
 
-    public int getuserId() {
+    public String getuserId() {
         return userId;
     }
 
-    public void setuserId(int userId) {
+    public void setuserId(String userId) {
         this.userId = userId;
     }
 
@@ -64,7 +65,7 @@ public class User {
 
     @Override
     public String toString() {
-        return name + ", " + email + ", " + userId + ", " + password;
+        return name + ", " + email + ", " + userId + ", "+ birthDate + ", " + password;
     }
 }
 

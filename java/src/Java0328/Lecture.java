@@ -2,16 +2,18 @@ package Java0328;
 
 public class Lecture {
     int lectureId;
-    String level;
-    String Category;
+    Level level;
+    Category Category;
     String instructor;
     String title;
+
+
 
 public Lecture () {
 
 }
 
-public Lecture(int lectureId, String level, String category, String instructor, String title){
+public Lecture(int lectureId, Level level, Category category, String instructor, String title){
     this.lectureId = lectureId;
     this.level = level;
     this.Category = category;
@@ -27,19 +29,19 @@ public Lecture(int lectureId, String level, String category, String instructor, 
         this.lectureId = lectureId;
     }
 
-    public String getLevel() {
+    public Level getLevel() {
         return level;
     }
 
-    public void setLevel(String level) {
+    public void setLevel(Level level) {
         this.level = level;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return Category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         Category = category;
     }
 

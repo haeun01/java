@@ -1,57 +1,77 @@
 package Java0328;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Main {
+    public static ArrayList<User> users;
+    public static ArrayList<Lecture> lectures;
+    public static ArrayList<LectureRst> lectureRsts;
     public static void main(String[] args) {
-        ArrayList<User> users = new ArrayList<>();
-        User user1 = new User("John", "john@naver.com", 123456, LocalDate.of(1999,1,1),49878);
-        users.add(user1);
-        User user2 = new User("Smith", "alice@naver.com", 789525,LocalDate.of(2001,2,5),963101);
-        users.add(user2);
-        User user3 = new User("Bob", "bob@naver.com", 456128, LocalDate.of(2004,5,7),715283);
-        users.add(user3);
+        //정보 초기화
+        InfoCreate.createInfos();
 
-        ArrayList<Lecture> lectures = new ArrayList<>();
-        Lecture lecture1 = new Lecture(1, "Java","beginner", "Programming","Tom");
-        lectures.add(lecture1);
-        Lecture lecture2 = new Lecture(2, "C++","beginner", "Programming","Tonny");
-        lectures.add(lecture2);
-        Lecture lecture3 = new Lecture(3, "Spring" ,"beginner", "Programming","Sam");
-        lectures.add(lecture3);
+        // 강의 ID로 수강하는 학생의 loginId 찾기
+        getLoginIdByLectureId(2);
+        // 유저의 loginId로 강의명 찾기
+        getTitleByLoginId("wait2");
 
-        ArrayList<LectureRst> lectureRsts = new ArrayList<>();
-        LectureRst lectureRst1 = new LectureRst(123456, 1);
-        lectureRsts.add(lectureRst1);
-        LectureRst lectureRst2 = new LectureRst(789525, 2);
-        lectureRsts.add(lectureRst2);
-        LectureRst lectureRst3 = new LectureRst(456128,3);
-        lectureRsts.add(lectureRst3);
-
-        for(int i = 0; i< lectureRsts.size(); i++) {
-            if (lectureRsts.get(i).getLectureId() == 1) {
-                System.out.println(lectureRsts.get(i).getUserId());
+        // 강의명으로 수강생들의 이메일 찾기
+        getEmailByLectureTitle("Java");
+    }
+    // 수강등록클래스에서 lectureId로 수강생의 loginId 찾기
+    // 두개의 정보가 모두 수강등록 클래스안에 있으므로 반복문을 1회만 사용해도 됨
+    public static void getLoginIdByLectureId(int lectureId) {
+        for(int i=0; i<lectureRsts.size(); i++) {
+            if (lectureRsts.get(i).getLectureId() == lectureId) {
+                System.out.println("1. 로그인ID : "
+                        + lectureRsts.get(i).getUserId());
             }
         }
+    }
 
-
-        for (int i = 0; i < users.size(); i++) {
-            int userId = users.get(i).getuserId();
-            for (int j = 0; j < lectureRsts.size(); j++) {
-                if (lectureRsts.get(i).getUserId() == userId) {
-                    int lectureId = lectureRsts.get(j).getLectureId();
-                    for (int k = 0; k < lectures.size(); k++) {
-                        if (lectures.get(i).getLectureId() == lectureId) {
-                            System.out.println("userId= " + userId +  ", Title Name= " + lectures.get(k).getTitle());
-                            break;
-                        }
+    // 수강생의 loginId로 수강중인 과목명 찾기
+    // 과목명은 수강등록 클래스안에 없기 때문에 수강등록 클래스에서 lectureId를 먼저 찾고
+    // lectureId로 과목클래스에서 과목명을 찾아야 함. (반복문 2회 필요)
+    public static void getTitleByLoginId(String loginId) {
+        for (int i=0; i<lectureRsts.size(); i++) {
+            if(lectureRsts.get(i).getUserId().equals(loginId)) {
+                int lectureId = lectureRsts.get(i).lectureId;
+                for (int j=0; j<lectures.size(); j++) {
+                    if (lectures.get(j).getLectureId() == lectureId) {
+                        String title = lectures.get(j).getTitle();
+                        System.out.println("2. 수강과목명 : " + title);
                     }
                 }
             }
         }
+    }
 
-
+    // 과목명으로 수강중인 학생들의 이메일 찾기
+    // 수강등록 클래스에서 관계정보를 얻으려면 해당 과목명의 lectureId를 먼저 얻어야 함(반복문1회)
+    // lectureId로 수강등록 클래스에서 수강생의 loginId를 얻고 (반목문1회)
+    // loginId로 유저 클래스에서 해당 유저의 이메일을 얻음(반복문1회)
+    public static void getEmailByLectureTitle(String title) {
+        int lectureId = -1;
+        for (int i = 0; i < lectures.size(); i++) {
+            if (lectures.get(i).getTitle().equals(title)) {
+                lectureId = lectures.get(i).getLectureId();
+                break;
+            }
+        }
+        if (lectureId < 0) {
+            return; // lectureId가 -1이라면 해당 과목명의 과목이 없다는 뜻
+        }
+        for (int i = 0; i < lectureRsts.size(); i++) {
+            if (lectureRsts.get(i).getLectureId() == lectureId) {
+                String loginId = String.valueOf(lectureRsts.get(i).getUserId());
+                for (int j = 0; j < users.size(); j++) {
+                    if (users.get(j).getuserId().equals(loginId)) {
+                        String email = users.get(j).getEmail();
+                        System.out.println("3. 이메일 : " + email);
+                    }
+                }
+            }
+        }
 
     }
 }
