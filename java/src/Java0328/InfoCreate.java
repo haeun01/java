@@ -21,5 +21,23 @@ public class InfoCreate {
         Main.lectureRsts.add(new LectureRst("bless99", 1));
         Main.lectureRsts.add(new LectureRst("omg01", 2));
         Main.lectureRsts.add(new LectureRst("wait2",3));
+
+        Main.teachers = new ArrayList<>();
+        Main.teachers.add(new Teacher("teacherNo1", "Michael"));
+        Main.teachers.add(new Teacher("teacherNo2", "Adrian"));
+
+        Main.lectureTeachers = new ArrayList<>();
+        Main.lectureTeachers.add(new LectureTeacher("teacherNo1", 1));
+        Main.lectureTeachers.add(new LectureTeacher("teacherNo1", 2));
+        Main.lectureTeachers.add(new LectureTeacher("teacherNo2", 3));
+        Main.lectureTeachers.add(new LectureTeacher("teacherNo2", 4));
+
+        Main.freeBoards = new ArrayList<>();
+        Main.freeBoards.add(new FreeBoard(1, "게시글 1"
+                , "게시판을 이용합시다", "tommy"));
+        Main.freeBoards.add(new FreeBoard(2, "게시글 2"
+                , "글이 너무 없네요", "sue"));
+        Main.freeBoards.add(new FreeBoard(3, "게시글 3"
+                , "너무 배고프다", "nice"));
     }
 }

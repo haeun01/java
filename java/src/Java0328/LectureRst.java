@@ -12,9 +12,11 @@ public class LectureRst {
     public LectureRst(String userId, int lectureId) {
         this.userId = userId;
         this.lectureId = lectureId;
+
     }
 
     public String getUserId() {
+
         return userId;
     }
 
@@ -27,6 +29,9 @@ public class LectureRst {
     }
 
     public void setLectureId(int lectureId) {
+
         this.lectureId = lectureId;
     }
+
+
 }

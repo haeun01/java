@@ -22,7 +22,8 @@ public Lecture(int lectureId, Level level, Category category, String instructor,
 }
 
     public int getLectureId() {
-        return lectureId;
+
+    return lectureId;
     }
 
     public void setLectureId(int lectureId) {
@@ -30,31 +31,31 @@ public Lecture(int lectureId, Level level, Category category, String instructor,
     }
 
     public Level getLevel() {
-        return level;
+    return level;
     }
 
     public void setLevel(Level level) {
-        this.level = level;
+    this.level = level;
     }
 
     public Category getCategory() {
-        return Category;
+    return Category;
     }
 
     public void setCategory(Category category) {
-        Category = category;
+    Category = category;
     }
 
     public String getInstructor() {
-        return instructor;
+    return instructor;
     }
 
     public void setInstructor(String instructor) {
-        this.instructor = instructor;
+    this.instructor = instructor;
     }
 
     public String getTitle() {
-        return title;
+    return title;
     }
 
     public void setTitle(String title) {
